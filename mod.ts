@@ -51,6 +51,10 @@ const html = `
     }
     #title{
       font-size: 14px;
+      text-wrap: nowrap;
+    }
+    ol{
+    margin-bottom: 4em;
     }
     
     @media only screen and (max-width: 768px) {
@@ -58,13 +62,20 @@ const html = `
       body {
         margin: 1em;
       }
+      ol{
+        margin: .5em;
+        padding: .5em;
+        margin-left: 1em;
+        margin-bottom: 4em;
+      }
+      
     }
   </style>
 </head>
 <body>
   <ol id="listvideo">
   </ol>
-  <div style="height: 100px;" />
+  
   <footer>
     <div style="padding: 5px;">
       <a href="#" id="title"></a>      
@@ -99,7 +110,7 @@ const html = `
         btn.innerText = e
         li.appendChild(btn)
         listvideo.appendChild(li)
-      })      
+      }) 
     }
     loadVideo()
   </script>
