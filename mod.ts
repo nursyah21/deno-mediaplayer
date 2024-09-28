@@ -143,7 +143,7 @@ Deno.serve({ port, hostname }, async (_req) => {
 
   if (pathname.startsWith('/videos/') && method == 'get') {
     let title: string[] | string = pathname.split('/')
-    title = decodeURI("." + title[title.length - 1])
+    title = decodeURI("./" + title[title.length - 1])
 
     return new Response(await Deno.readFile(title), { headers })
   };
