@@ -1,0 +1,19 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@kingsword09/ts-qrcode-terminal@^1.0.0": "jsr:@kingsword09/ts-qrcode-terminal@1.0.0"
+    },
+    "jsr": {
+      "@kingsword09/ts-qrcode-terminal@1.0.0": {
+        "integrity": "2fec5175164db5ed03d864f6d4fcf99fe0f0fbaa1d29094653ec1a3a94805291"
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "jsr:@kingsword09/ts-qrcode-terminal@^1.0.0"
+    ]
+  }
+}

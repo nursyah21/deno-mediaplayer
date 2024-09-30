@@ -1,9 +1,12 @@
 {
   "name": "@nurs/mediaplayer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "exports": "./mod.ts",
 
   "tasks": {
     "dev": "deno run -A --watch mod.ts"
+  },
+  "imports": {
+    "@kingsword09/ts-qrcode-terminal": "jsr:@kingsword09/ts-qrcode-terminal@^1.0.0"
   }
 }
