@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+export default`<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -127,7 +127,7 @@
         const btn = document.createElement('button')
         const link = "/videos/"+e
         btn.setAttribute('href',link)
-        btn.setAttribute('onclick', `set("${e}","${link}")`)
+        btn.setAttribute('onclick', \`set("\${e}","\${link}")\`)
         btn.innerText = e
         li.appendChild(btn)
         listvideo.appendChild(li)
@@ -161,4 +161,4 @@
     loadVideo()
   </script>
 </body>
-</html>
+</html>`

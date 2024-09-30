@@ -1,4 +1,5 @@
 import * as qrcode from '@kingsword09/ts-qrcode-terminal'
+import html from './html.ts'
 
 let port = 4000
 let hostname = 'localhost'
@@ -20,7 +21,7 @@ const run = (_port: number) => Deno.serve({ port: _port, hostname }, async (_req
 
   if (pathname == '/' && method == 'get') {
     headers.set('Content-Type', 'text/html')
-    return new Response(await Deno.readFile(`${import.meta.dirname}/index.html`), { headers })    
+    return new Response(html, { headers })
   };
 
   if (pathname == '/api/videos' && method == 'get') {
@@ -50,7 +51,7 @@ while (tryagain) {
   try {
     run(port)
     tryagain = false
-    qrcode.generate(`http://${hostname}:${port}`, {small: true, qrErrorCorrectLevel: 1})        
+    qrcode.generate(`http://${hostname}:${port}`, { small: true, qrErrorCorrectLevel: 1 })
   } catch (_) {
     port += 1
   }
