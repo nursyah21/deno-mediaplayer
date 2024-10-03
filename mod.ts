@@ -28,7 +28,7 @@ const run = (_port: number) => Deno.serve({ port: _port, hostname }, async (_req
     const files: string[] = []
 
     for await (const dirEntry of Deno.readDirSync(".")) {
-      if (!dirEntry.isFile || !/\.(m4a|mp4|webm|mkv|mov|avi)$/.test(dirEntry.name)) continue
+      if (!dirEntry.isFile || !/\.(mp3|m4a|mp4|webm|mkv|mov|avi)$/.test(dirEntry.name)) continue
       files.push(dirEntry.name)
     }
 
